@@ -47,7 +47,11 @@ public class FXMLController {
     
     @FXML
     void doAnalizzaOggetti(ActionEvent event) {
+    	Long start = System.currentTimeMillis();
+    	model.creaGrafo();
+    	Long and = System.currentTimeMillis();
 
+    	txtResult.appendText("Tempo di produzione: " + (and-start)/1000 + "s.");
     }
 
     @FXML
